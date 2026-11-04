@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-serif: 'Source Serif 4', Georgia, serif;
+
+    /* University of Miami Official Brand Colors */
+    --um-green: #005030;
+    --um-green-hover: #003D24;
+    --um-green-light: #EBF3EE;
+    --um-orange: #F47321;
+    --um-orange-hover: #D95F12;
+    --um-orange-light: #FEF2EB;
+    --um-gold: #FFB81C;
+    --um-dark: #0D1F17;
+    --um-body-bg: #F5F8F6;
+    --um-border: #E0EAE4;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--um-body-bg);
+    color: var(--um-dark);
+  }
+}
+
+/* Custom scrollbars for clean clinical desktop aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #C8D8CE;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A6BFB0;
+}
+
+/* Authentic Hospital Thermal EKG Paper Grid
+   Standard 25 mm/s paper speed:
+   1 small box = 1 mm = 6px (0.04s)
+   1 large box = 5 mm = 30px (0.20s)
+   30 large boxes = 900px = exactly 6.0 seconds
+*/
+.ecg-grid-pink {
+  background-color: #FFF6F3;
+  background-image: 
+    linear-gradient(to right, rgba(220, 38, 38, 0.45) 1.2px, transparent 1.2px),
+    linear-gradient(to bottom, rgba(220, 38, 38, 0.45) 1.2px, transparent 1.2px),
+    linear-gradient(to right, rgba(239, 68, 68, 0.18) 0.8px, transparent 0.8px),
+    linear-gradient(to bottom, rgba(239, 68, 68, 0.18) 0.8px, transparent 0.8px);
+  background-size: 30px 30px, 30px 30px, 6px 6px, 6px 6px;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+}
+
+/* University of Miami UHealth CCU Telemetry Monitor
+   Deep Cypress Green CRT background with Miami Green phosphor grid & wave
+*/
+.ecg-grid-dark {
+  background-color: #021810;
+  background-image: 
+    linear-gradient(to right, rgba(0, 80, 48, 0.65) 1.2px, transparent 1.2px),
+    linear-gradient(to bottom, rgba(0, 80, 48, 0.65) 1.2px, transparent 1.2px),
+    linear-gradient(to right, rgba(34, 197, 94, 0.18) 0.8px, transparent 0.8px),
+    linear-gradient(to bottom, rgba(34, 197, 94, 0.18) 0.8px, transparent 0.8px);
+  background-size: 30px 30px, 30px 30px, 6px 6px, 6px 6px;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+}
+

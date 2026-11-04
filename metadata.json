@@ -1,0 +1,6 @@
+{
+  "name": "CardioNurse EKG Masterclass",
+  "description": "Interactive telemetry training for BSN nurses: visual ECG strip interpreter with digital calipers, complete 22-rhythm compendium, child metaphors, mnemonics, audio telemetry, and clinical shift game.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
